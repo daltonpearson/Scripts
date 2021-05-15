@@ -23,7 +23,7 @@ players = [
 
 shuffle(players)
 split_point = round(len(players) / 2)
-team_1, team_2 = dict(list(zip(roles, players[:split_point]))), dict(list(zip(roles, players[split_point:])))
+team_1, team_2 = dict(zip(roles, players[:split_point])), dict(zip(roles, players[split_point:]))
 
 print('Team 1:')
 [print(f'   - {player} ({role})') for role, player in team_1.items()]
